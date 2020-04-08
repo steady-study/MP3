@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\001\20200408\WaveRead\bin\Debug\WaveRead.exe.config
+C:\Users\user\Desktop\001\20200408\WaveRead\bin\Debug\WaveRead.exe
+C:\Users\user\Desktop\001\20200408\WaveRead\bin\Debug\WaveRead.pdb
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.csprojAssemblyReference.cache
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.Form1.resources
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.Properties.Resources.resources
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.csproj.GenerateResource.cache
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.exe
+C:\Users\user\Desktop\001\20200408\WaveRead\obj\Debug\WaveRead.pdb
