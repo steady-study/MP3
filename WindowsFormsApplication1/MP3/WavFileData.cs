@@ -13,47 +13,46 @@ namespace MP3
         //TODO: ENCAPSULATION FIX !IMPORTANT
 
         /*0  -  3*/ /* 4 */
-        public string chunkId; //содержит символы "RIFF"
+        public string chunkId; 
 
         /*4  -  7*/ /* 4 */
-        public int chunkSize; //размер оставшейся цепочки - размер файла минус 8 байт
+        public int chunkSize; 
 
         /*8  - 11*/ /* 4 */
-        public string format; //содержит символы "WAVE"
+        public string format;
 
         /*12 - 15*/ /* 4 */
-        public string subchunk1Id; //содержит символы "fmt "
+        public string subchunk1Id;"
 
         /*16 - 19*/ /* 4 */
-        public int subchunk1Size; //16 для PCM - размер оставшейся подцепочки
+        public int subchunk1Size; 
 
         /*20 - 21*/ /* 2 */
         public short
-            audioFormat; //1 для PCM TODO: extend https://audiocoding.ru/articles/2008-05-22-wav-file-structure/wav_formats.txt
+            audioFormat; // https://audiocoding.ru/articles/2008-05-22-wav-file-structure/wav_formats.txt
 
         /*22 - 23*/ /* 2 */
-        public short numChannels; //количество каналов
-
+        public short numChannels; 
         /*24 - 27*/ /* 4 */
-        public int sampleRate; //частота дискретизации
+        public int sampleRate; 
 
         /*28 - 31*/ /* 4 */
-        public int byteRate; //количество байт в секунду воспроизведения
+        public int byteRate; 
 
         /*32 - 33*/ /* 2 */
-        public short blockAlign; //байт на 1 сэмпл включая все каналы
+        public short blockAlign; 
 
         /*34 - 35*/ /* 2 */
-        public short bitsPerSample; //количество бит в сэмпле или глубина кодирования
+        public short bitsPerSample; 
 
         /*36 - 39*/ /* 4 */
-        public string subchunk2Id; //содержит символы "data"
+        public string subchunk2Id;
 
         /*40 - 43*/ /* 4 */
-        public int subchunk2Size; //количество байт в области данных
+        public int subchunk2Size; 
 
         /*44 -inf*/ /* 0 */
-        public byte[] WavData; //сами WAV данные
+        public byte[] WavData; 
 
         #endregion
 
@@ -67,7 +66,7 @@ namespace MP3
 
         #endregion
 
-        //функция рассчитывает спектр для заданного количества сэмплов начиная с нормализованной позиции
+        
         public float[] GetSpectrumForPosition(float position, FFTProvider fftProvider)
         {
             int start = (int)(samplesCount * position);
@@ -76,7 +75,7 @@ namespace MP3
             return spectrum;
         }
 
-        //функция рассчитывает спектр для заданного количества сэмплов начиная с нормализованной позиции
+        
         public float[] GetSpectrumForPosition(int startSample, FFTProvider fftProvider)
         {
             int start = startSample;
@@ -124,11 +123,11 @@ namespace MP3
                     samples = new float[length / 3];
                     for (int i = 0; i < samples.Length; i++)
                     {
-                        //т.к. 24 бит влезает только в 32 бит число, записываем как есть и смещаем всё на 8 бит влево.
+                       
                         int sample
                             = (((data[i * 3 + 0] & 0xff) << 0) | ((data[i * 3 + 1] & 0xff) << 8) |
                                ((data[i * 3 + 2] & 0xff) << 16)) << 8;
-                        //Делим на 2^32 - максимальное число в 32 битном числе, а не 24.
+                       
                         samples[i] =
                             (float)(sample / pow2_31);
                     }

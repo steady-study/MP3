@@ -23,11 +23,13 @@ namespace MP3
         int trackBarMouseX = 0;            // trackbar에서 마우스 클릭 위치 초기화.
 
 
-
+        //플레이어
         private WindowsMediaPlayerProvider _playerProvider;
 
+        //현재 열린 wav파일
         private WavFileData _currentWavFileData;
         private FFTProvider _fftProvider;
+        private SpectrumDiagramDrawer _spectrumDiagramDrawer;
 
         private int _lastSamplePosition;
         public bool ApplyTimeThinning = true;
