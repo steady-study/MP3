@@ -53,5 +53,20 @@ namespace MP3
         }
 
         public SpectrumDiagramDrawer(int spectrumSamples, Rectangle displayRectangle, WavFileData filedata)
+        {
+            SpectrumSamples = spectrumSamples;
+            SpectrumValues = new float[SpectrumSamples];
+            DisplayRectangle = displayRectangle;
+            Diagram = new DirecBitmap((int)displayRectangle.Width, (int)displayRectangle.Height);
+            Color = Color.OrangeRed;
+
+            FftProvider = new CorrectCooleyTukeyInPlaceFFTProvider(SpectrumSamples, ApplyTimeThinning);
+            FileData = filedata;
+        }
+
+        ~SpectrumDiagramDrawer()
+        {
+            Diagram.Dispose();
+        }
     }
 }

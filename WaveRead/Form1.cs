@@ -16,6 +16,9 @@ namespace WaveRead
         public Form1()
         {
             InitializeComponent();
+
+            player = new Player();
+
         }
 
         private void Open_Click(object sender, EventArgs e)
@@ -43,5 +46,18 @@ namespace WaveRead
         {
             player.Play();
         }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (!player.isOpened)
+                return;
+            else
+            {
+                TimeSpan t = TimeSpan.FromMilliseconds(player.GetPosition());
+                label1.Text = string.Format
+            }
+        }
+
+        
     }
 }

@@ -22,7 +22,7 @@ namespace MP3
         public string format;
 
         /*12 - 15*/ /* 4 */
-        public string subchunk1Id;"
+        public string subchunk1Id;
 
         /*16 - 19*/ /* 4 */
         public int subchunk1Size; 

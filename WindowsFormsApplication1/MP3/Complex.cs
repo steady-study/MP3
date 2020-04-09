@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace MP3
 {
-    class Complex : ICloneable, ISerializable
+    public struct Complex : ICloneable, ISerializable
     {
         public double Re;
         public double Im;
@@ -87,7 +87,7 @@ namespace MP3
             result.Im = a.Im;
         }
 
-        public static Complex Multiplay(Complex a, Complex)
+        public static Complex Multiplay(Complex a, Complex b)
         {
             double aRe = a.Re, aIm = a.Im;
             double bRe = b.Re, bIm = b.Im;
@@ -449,12 +449,13 @@ namespace MP3
 
         public static Complex operator -(double s, Complex a)
         {
-            return Complex.Subtract(s, a);
+            return Complex.Substract(s, a);
         }
 
+         
         public static Complex operator *(Complex a, Complex b)
         {
-            return Complex.Multiply(a, b);
+            return Complex.Multiplay(a, b);
         }
 
         public static Complex operator *(double s, Complex a)
@@ -522,5 +523,5 @@ namespace MP3
 
         #endregion
     }
-}
+
 }

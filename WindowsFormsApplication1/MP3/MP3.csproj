@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicSpectrumDiagramDrawer.cs" />
+    <Compile Include="ClassicRecursiveFFTProvider.cs" />
     <Compile Include="Complex.cs" />
     <Compile Include="CorrectCooleyTukeyInPlaceFFTProvider.cs" />
     <Compile Include="DirecBitmap.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="SpectrumDiagramDrawer.cs" />
     <Compile Include="TimeProvider.cs" />
+    <Compile Include="TrueVolumeProvider.cs" />
     <Compile Include="TrueWaveformProvider.cs" />
     <Compile Include="WavFileData.cs" />
     <Compile Include="WindowsMediaPlayerProvider.cs" />

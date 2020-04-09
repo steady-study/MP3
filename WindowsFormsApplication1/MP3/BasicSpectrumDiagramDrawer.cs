@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using System.Threading.Tasks;
+
 
 namespace MP3
 {
@@ -36,7 +36,7 @@ namespace MP3
                 float[] heightPixels = new float[(int)DisplayRectangle.Height + 1];
 
                 //int lastX = 0;
-                for (int i = 0; i < DisplayRectangle.Width; i < ++)
+                for (int i = 0; i < DisplayRectangle.Width; i++)
                 {
                     if (Canceled)
                     {

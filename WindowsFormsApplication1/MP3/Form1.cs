@@ -30,6 +30,7 @@ namespace MP3
         private WavFileData _currentWavFileData;
         private FFTProvider _fftProvider;
         private SpectrumDiagramDrawer _spectrumDiagramDrawer;
+        public int TrimFrequency = 20000;       //주파수 인식하게 하는 빈도.
 
         private int _lastSamplePosition;
         public bool ApplyTimeThinning = true;
@@ -95,6 +96,8 @@ namespace MP3
         {
             _spectrumBitmap = new DirecBitmap(pictureBox1.Width, pictureBox1.Height);
             _volumeBitmap = new DirecBitmap(pictureBox2.Width, pictureBox2.Height);
+
+            _trueVolumeProvider = new TureVolumeProvider();
         }
 
         //파일재생
@@ -195,8 +198,7 @@ namespace MP3
         {
             _spectrumDiagramDrawer?.Cancel();
             //_spectrumDiagramDrawer = new IterationableSpectrumDiagramDrawer(SpectrumUseSamples, Rectangle.FromPictureBox(pictureBoxSpectrumDiagram), _currentWavFileData, 50);
-            _spectrumDiagramDrawer = new BasicSpectrumDiagramDrawer(SpectrumUseSamples,
-                Rectangle.FromPictureBox(pictureBoxSpectrumDiagram), _currentWavFileData);
+           // _spectrumDiagramDrawer = new BasicSpectrumDiagramDrawer(SpectrumUseSamples, Rectangle.FromPictureBox(pictureBoxSpectrumDiagram), _currentWavFileData);
             _spectrumDiagramDrawer.SetTrimmingFrequency(TrimFrequency);
             _spectrumDiagramDrawer.SetApplyTimeThinning(ApplyTimeThinning);
             _spectrumDiagramDrawer.Recreate();
