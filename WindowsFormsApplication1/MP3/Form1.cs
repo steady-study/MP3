@@ -97,13 +97,17 @@ namespace MP3
             _spectrumBitmap = new DirecBitmap(pictureBox1.Width, pictureBox1.Height);
             _volumeBitmap = new DirecBitmap(pictureBox2.Width, pictureBox2.Height);
 
-            _trueVolumeProvider = new TureVolumeProvider();
+            //_trueVolumeProvider = new TureVolumeProvider();
+            SetPlayerProvider();
         }
 
         //파일재생
         private void button1_Click(object sender, EventArgs e)
         {
             mp3Player.Play();
+            timer2.Interval = 20;
+            timer2.Enabled = true;
+            timer2.Start();
         }
 
         //파일열기

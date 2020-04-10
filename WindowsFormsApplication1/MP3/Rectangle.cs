@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MP3
 {
-    class Rectangle
+    public class Rectangle
     {
         private float _left;
         private float _right;

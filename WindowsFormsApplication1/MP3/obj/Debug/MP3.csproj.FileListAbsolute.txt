@@ -1,7 +1,6 @@
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debug\MP3.exe.config
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debug\MP3.exe
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debug\MP3.pdb
-C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.csprojAssemblyReference.cache
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.Form1.resources
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.Properties.Resources.resources
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.csproj.GenerateResource.cache
@@ -14,3 +13,4 @@ C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debu
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debug\NAudio.Lame.dll
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\bin\Debug\NAudio.xml
 C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.csproj.CopyComplete
+C:\Users\user\Desktop\AudioSpectrum-master\WindowsFormsApplication1\MP3\obj\Debug\MP3.csprojAssemblyReference.cache

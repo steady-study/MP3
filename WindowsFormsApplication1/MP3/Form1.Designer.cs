@@ -135,7 +135,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 1;
+            this.timer2.Interval = 20;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1

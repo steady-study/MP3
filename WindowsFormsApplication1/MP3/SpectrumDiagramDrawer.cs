@@ -9,7 +9,7 @@ namespace MP3
         protected int SpectrumSamples;
         protected float[] SpectrumValues;
 
-        protected Rectangle DisplayRectangle;   
+        protected Rectangle DisplayRectangle;
         protected FFTProvider FftProvider;
         protected WavFileData FileData;
 
